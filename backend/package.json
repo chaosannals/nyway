@@ -1,0 +1,35 @@
+{
+  "name": "nyway-backend",
+  "version": "0.0.1",
+  "description": "yet a game backend.",
+  "author": {
+    "name": "chenshenchao",
+    "email": "chenshenchao@outlook.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenshenchao/nyway.git"
+  },
+  "keywords": [
+    "noway"
+  ],
+  "main": "main/application.js",
+  "scripts": {
+    "produce": "node main/application.js",
+    "develop": "nodemon main/application.js",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mysql": "^2.16.0"
+  }
+}

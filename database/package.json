@@ -1,0 +1,30 @@
+{
+  "name": "nyway-database",
+  "version": "0.0.1",
+  "description": "nyway database console script.",
+  "author": "chenshenchao <chenshenchao@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenshenchao/nyway.git"
+  },
+  "keywords": [
+    "nyway"
+  ],
+  "scripts": {
+    "build": "node main/build.js",
+    "setup": "node main/setup.js",
+    "clear": "node main/clear.js",
+    "wreck": "node main/wreck.js",
+    "resetup": "node main/clear.js && node/setup.js",
+    "rebuild": "node main/wreck.js && node main/build.js && node main/setup.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
