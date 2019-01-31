@@ -13,7 +13,10 @@ export default new Router({
     }, {
         path: '/login.html',
         name: 'login',
-        component: () => import('./pages/Login.vue')
+        component: () => import('./pages/Login.vue'),
+        meta: {
+            title: '登录',
+        },
     }, {
         path: '/world.html',
         name: 'world',
