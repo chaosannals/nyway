@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `nw_role` (
     `max_mp` DECIMAL(10, 2) NOT NULL COMMENT '最大魔法值',
     `hp` DECIMAL(10, 2) NOT NULL COMMENT '当前生命值',
     `mp` DECIMAL(10, 2) NOT NULL COMMENT '当前魔法值',
+    `money` DECIMAL(10, 2) NOT NULL COMMENT '钱',
     `createtime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     PRIMARY KEY (`id`),
     KEY `CREATETIME_INDEX` (`createtime`)

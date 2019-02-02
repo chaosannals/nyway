@@ -10,7 +10,19 @@
 <script>
 export default {
     name: 'app',
-}
+    methods: {
+
+    },
+    created() {
+        let url = 'ws://' + location.host + '/instant';
+        let socket = new WebSocket(url);
+        console.log(url);
+        socket.onopen = (event) => {
+            console.log('Hello');
+            socket.send('Hello');
+        };
+    },
+};
 </script>
 
 <style>

@@ -13,6 +13,16 @@
                         <el-form-item label="密码">
                             <el-input v-model="sheet.password" type="password"/>
                         </el-form-item>
+                        <el-form-item label="验证码">
+                            <el-row>
+                                <el-col :span="12">
+                                    <captcha/>
+                                </el-col>
+                                <el-col :span="12">
+                                    <el-input v-model="sheet.captcha"/>
+                                </el-col>
+                            </el-row>
+                        </el-form-item>
                         <el-form-item class="button-row">
                             <el-button>
                                 <span>登录</span>
@@ -27,12 +37,18 @@
 </template>
 
 <script>
+import Captcha from '@/widgets/Captcha.vue';
+
 export default {
+    components: {
+        Captcha,
+    },
     data() {
         return {
             sheet: {
                 username: '',
                 password: '',
+                captcha: '',
             },
         };
     },

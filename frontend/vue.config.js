@@ -4,12 +4,17 @@ module.exports = {
     devServer: {
         port: 8080,
         proxy: {
-            '/api': {
+            '^/api': {
                 target: 'http://127.0.0.1',
                 ws: true,
                 changeOrigin: false,
             },
-            '/captcha': {
+            '^/instant': {
+                target: 'http://127.0.0.1',
+                ws: true,
+                changeOrigin: false,
+            },
+            '^/captcha': {
                 target: 'http://127.0.0.1',
                 ws: true,
                 changeOrigin: false,
