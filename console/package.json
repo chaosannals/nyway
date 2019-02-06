@@ -17,7 +17,8 @@
     "clear": "node main/clear.js",
     "wreck": "node main/wreck.js",
     "resetup": "node main/clear.js && node/setup.js",
-    "rebuild": "node main/wreck.js && node main/build.js && node main/setup.js",
+    "rebuild": "node main/wreck.js && node main/build.js",
+    "initialize": "node main/wreck.js && node main/build.js && node main/setup.js",
     "test": "mocha"
   },
   "dependencies": {
