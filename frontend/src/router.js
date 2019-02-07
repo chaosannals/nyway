@@ -20,6 +20,9 @@ export default new Router({
     }, {
         path: '/world.html',
         name: 'world',
-        component: () => import('./pages/World.vue')
+        component: () => import('./pages/World.vue'),
+        meta: {
+            title: '世界',
+        },
     }],
 });

@@ -16,9 +16,7 @@ export default {
     created() {
         let url = 'ws://' + location.host + '/instant';
         let socket = new WebSocket(url);
-        console.log(url);
-        socket.onopen = (event) => {
-            console.log('Hello');
+        socket.onopen = () => {
             socket.send('Hello');
         };
     },

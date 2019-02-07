@@ -24,7 +24,7 @@
                             </el-row>
                         </el-form-item>
                         <el-form-item class="button-row">
-                            <el-button>
+                            <el-button @click="onSubmit">
                                 <span>登录</span>
                             </el-button>
                         </el-form-item>
@@ -54,10 +54,10 @@ export default {
     },
     methods: {
         onSubmit() {
-            
-        }
-    }
-}
+            this.$store.dispatch('user/login', this.sheet);
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
