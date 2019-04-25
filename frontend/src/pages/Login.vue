@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import CanvasNest from 'canvas-nest.js';
 import Captcha from '@/widgets/Captcha.vue';
 
 export default {
@@ -50,18 +51,51 @@ export default {
                 password: '',
                 captcha: '',
             },
+            nest: null,
+            nests: [],
         };
     },
     methods: {
         onSubmit() {
             this.$store.dispatch('user/login', this.sheet);
         },
+        randomColor() {
+            let red = Math.round(Math.random() * 255);
+            let blue = Math.round(Math.random() * 255);
+            let green = Math.round(Math.random() * 255);
+            return `${red},${blue},${green}`;
+        },
+        createNests() {
+            for (let i=0; i < 8; ++i) {
+                let nest = new CanvasNest(this.$el, {
+                    color: this.randomColor(),
+                    count: Math.round(Math.random() * 50),
+                });
+                this.nests.push(nest);
+            }
+        },
+        removeNests() {
+            for(let nest of this.nests) {
+                nest.destory();
+            }
+        }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.createNests();
+        });
+    },
+    beforeDestory() {
+        this.removeNests();
     },
 };
 </script>
 
 <style lang="scss" scoped>
 .login-page {
+    width: 100%;
+    height: 100%;
+
     .login-form {
         box-sizing: border-box;
         border: 1px solid #bbb;

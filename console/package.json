@@ -11,6 +11,13 @@
   "keywords": [
     "nyway"
   ],
+  "dependencies": {
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
   "scripts": {
     "build": "node main/build.js",
     "setup": "node main/setup.js",
@@ -18,14 +25,7 @@
     "wreck": "node main/wreck.js",
     "resetup": "node main/clear.js && node/setup.js",
     "rebuild": "node main/wreck.js && node main/build.js",
-    "initialize": "node main/wreck.js && node main/build.js && node main/setup.js",
+    "inprove": "node main/wreck.js && node main/build.js && node main/setup.js",
     "test": "mocha"
-  },
-  "dependencies": {
-    "mysql": "^2.16.0"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0"
   }
 }

@@ -1,17 +1,13 @@
 const mysql = require('mysql');
+const conf = require('../conf/database');
 
-let pool = mysql.createPool({
-    host: '127.0.0.1',
-    port: 3306,
-    user: 'developer',
-    password: 'developer',
-    database: 'nyway',
-    charset: 'UTF8MB4_UNICODE_CI',
-    debug: false,
-});
+let pool = mysql.createPool(conf);
 
 module.exports = {
     raw: mysql.raw,
+    /**
+     * 
+     */
     query: (sql, values) => {
         return new Promise((resolve, reject) => {
             pool.getConnection((error, connection) => {

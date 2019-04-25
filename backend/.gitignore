@@ -2,3 +2,4 @@
 /view/
 /*lock*
 /.*rc
+/.env
