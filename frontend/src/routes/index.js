@@ -9,18 +9,18 @@ export default new Router({
     routes: [{
         path: '/about.html',
         name: 'about',
-        component: () => import('@/pages/About.vue')
+        component: () => import('@/views/pages/About.vue')
     }, {
         path: '/login.html',
         name: 'login',
-        component: () => import('@/pages/Login.vue'),
+        component: () => import('@/views/pages/Login.vue'),
         meta: {
             title: '登录',
         },
     }, {
         path: '/world.html',
         name: 'world',
-        component: () => import('@/pages/World.vue'),
+        component: () => import('@/views/pages/World.vue'),
         meta: {
             title: '世界',
         },

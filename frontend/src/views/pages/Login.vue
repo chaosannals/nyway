@@ -38,7 +38,7 @@
 
 <script>
 import CanvasNest from 'canvas-nest.js';
-import Captcha from '@/widgets/Captcha.vue';
+import Captcha from '@/views/widgets/Captcha.vue';
 
 export default {
     components: {
@@ -51,7 +51,6 @@ export default {
                 password: '',
                 captcha: '',
             },
-            nest: null,
             nests: [],
         };
     },
